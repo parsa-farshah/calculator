@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="src/style/output.css" />
+  </head>
+  <body>
+    <section id="bgDark" class="w-full bg-[#9272fc] h-[100vh] relative">
+      <!-- calc -->
+      <section
+        class="w-[300px] h-[500px] rounded-4xl bg-[#311f6b] py-[2%] px-[1%] border-2 border-[#4223ad] absolute top-7 left-[50%] -translate-x-1/2 perspective-midrange transform-3d"
+      >
+        <!-- number -->
+        <div
+          class="w-full h-[100px] px-6 rounded-4xl bg-white shadowNumber overflow-hidden relative"
+        >
+          <span
+            class="pointer-events-none absolute top-[50%] -translate-y-1/2 left-0 text-7xl text-gray-400 opacity-30 favFont select-none"
+          >
+            0000000
+          </span>
+          <h1
+            id="inp"
+            class="w-full mt-3 h-full text-black text-7xl favFont absolute top-0 left-0 z-50"
+          ></h1>
+        </div>
+        <!-- oprator -->
+
+        <div
+          id="txtColor"
+          class="w-full mt-5 flex flex-wrap justify-between transform-3d"
+        >
+          <!-- first row -->
+          <!-- ac -->
+          <div
+            class="w-[48%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-300 relative overflow-hidden z-50 transform-3d perspective-midrange"
+            onclick="reset(this)"
+          >
+            AC
+          </div>
+          <!-- % -->
+
+          <div
+            class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-300"
+            onclick="find(this)"
+          >
+            %
+          </div>
+          <!-- / -->
+
+          <div
+            class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-300"
+            onclick="find(this)"
+          >
+            /
+          </div>
+          <!-- end first row -->
+          <!-- second row -->
+          <div class="w-full flex justify-between mt-5">
+            <!-- 7 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              7
+            </div>
+            <!-- 8 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              8
+            </div>
+            <!-- 9 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              9
+            </div>
+            <!-- * -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              *
+            </div>
+          </div>
+          <!-- end second row -->
+
+          <!-- third row -->
+          <div class="w-full flex justify-between mt-5">
+            <!-- 7 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              4
+            </div>
+            <!-- 8 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              5
+            </div>
+            <!-- 9 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              6
+            </div>
+            <!-- * -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              +
+            </div>
+          </div>
+          <!-- end third row -->
+
+          <!--fourth row -->
+          <div class="w-full flex justify-between mt-5 inset-shadow-2xs">
+            <!-- 7 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              1
+            </div>
+            <!-- 8 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              2
+            </div>
+            <!-- 9 -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              3
+            </div>
+            <!-- * -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              -
+            </div>
+          </div>
+          <!-- end fourth row -->
+
+          <!--fifth row -->
+          <div class="w-full flex justify-between mt-5">
+            <!-- 0 -->
+            <div
+              class="w-[48%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              0
+            </div>
+
+            <!-- . -->
+            <div
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="find(this)"
+            >
+              .
+            </div>
+            <!-- = -->
+            <div
+              id="res"
+              class="w-[23%] h-[50px] rounded-full bg-[#5a31e5] flex justify-center items-center text-white text-2xl font-black cursor-pointer inset-shadow-2xs inset-shadow-black hover:inset-shadow-sm duration-500"
+              onclick="res()"
+            >
+              =
+            </div>
+          </div>
+          <!-- end fifth row -->
+        </div>
+
+        <!-- 3d bg calc -->
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[3px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[3.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[4px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[4.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[5.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[6px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[6.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[7px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[7.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[8px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[8.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[9px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[9.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[10px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[10.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[11px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[11.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[12px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[12.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[13px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[13.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[14px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[14.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[15px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[15.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[16px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[16.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[17px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[17.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[18px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[18.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[19px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[19.5px]"
+        ></div>
+        <div
+          class="w-[101%] h-[101%] perspective-midrange backface-visible rounded-4xl bg-[#4429aa] absolute top-0 left-0 transform-3d -translate-z-[20px]"
+        ></div>
+      </section>
+    </section>
+    <!-- dark mode -->
+    <section
+      id="toggleDark"
+      class="w-36 h-[50px] bg-[#ffffff38] backdrop-blur-3xl absolute top-4 left-4 rounded-full flex items-center justify-around inset-shadow-sm inset-shadow-black"
+    >
+      <figure id="light" onclick="lightMode()" class="cursor-pointer">
+        <img class="w-14 h-14" src="src/images/light mode.png" alt="" />
+      </figure>
+      <figure id="dark" onclick="darkMode()" class="cursor-pointer">
+        <img class="w-14 h-14" src="src/images/dark mode.png" alt="" />
+      </figure>
+      <div
+        id="btnT"
+        class="w-[70px] h-full bg-[#ffffff] rounded-full absolute transition-all duration-300 left-0"
+      ></div>
+    </section>
+  </body>
+  <script src="src/js/master.js"></script>
+</html>
