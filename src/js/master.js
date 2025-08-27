@@ -99,10 +99,9 @@ let calc = document.getElementById("calc");
 function anim() {
   calc.classList.remove("rotate-z-[60deg]");
   calc.classList.remove("rotate-x-[40deg]");
-  calc.classList.add("sm:top-[100px]");
-  calc.classList.add("top-[80px]");
-  calc.classList.add("left-[65%]");
-  calc.classList.add("sm:left-[50%]");
-  calc.classList.remove("sm:left-[55%]");
-  calc.classList.remove("left-[70%]");
+  calc.classList.add("sm:top-7");
+  calc.classList.add("top-[85px]");
+  calc.classList.add("sm:top-[90px]");
+  calc.classList.remove("left-[60%]");
+  calc.classList.add("left-[50%]");
 }
