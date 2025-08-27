@@ -94,13 +94,13 @@ btnLight.addEventListener("click", () => {
   txtColor.forEach((el) => el.classList.add("text-white"));
 });
 
-let calc = document.getElementById("calc");
+// let calc = document.getElementById("calc");
 
-function anim() {
-  calc.classList.toggle("rotate-z-[60deg]");
-  calc.classList.toggle("rotate-x-[40deg]");
-  calc.classList.toggle("sm:top-7");
-  calc.classList.toggle("top-[80px]");
-  calc.classList.toggle("left-[50%]");
-  calc.classList.toggle("left-[55%]");
-}
+// function anim() {
+//   calc.classList.toggle("rotate-z-[60deg]");
+//   calc.classList.toggle("rotate-x-[40deg]");
+//   calc.classList.toggle("sm:top-7");
+//   calc.classList.toggle("top-[80px]");
+//   calc.classList.toggle("left-[50%]");
+//   calc.classList.toggle("left-[55%]");
+// }
