@@ -210,11 +210,29 @@
   .left-4 {
     left: calc(var(--spacing) * 4);
   }
+  .left-\[20\%\] {
+    left: 20%;
+  }
+  .left-\[30\%\] {
+    left: 30%;
+  }
+  .left-\[40\%\] {
+    left: 40%;
+  }
   .left-\[50\%\] {
     left: 50%;
   }
   .left-\[55\%\] {
     left: 55%;
+  }
+  .left-\[60\%\] {
+    left: 60%;
+  }
+  .left-\[65\%\] {
+    left: 65%;
+  }
+  .left-\[70\%\] {
+    left: 70%;
   }
   .z-50 {
     z-index: 50;
@@ -444,6 +462,24 @@
     --tw-translate-z: calc(20px * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y) var(--tw-translate-z);
   }
+  .scale-50 {
+    --tw-scale-x: 50%;
+    --tw-scale-y: 50%;
+    --tw-scale-z: 50%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-70 {
+    --tw-scale-x: 70%;
+    --tw-scale-y: 70%;
+    --tw-scale-z: 70%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-80 {
+    --tw-scale-x: 80%;
+    --tw-scale-y: 80%;
+    --tw-scale-z: 80%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
   .rotate-x-\[40deg\] {
     --tw-rotate-x: rotateX(40deg);
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -648,6 +684,39 @@
       top: calc(var(--spacing) * 7);
     }
   }
+  .sm\:top-50 {
+    @media (width >= 40rem) {
+      top: calc(var(--spacing) * 50);
+    }
+  }
+  .sm\:top-\[50px\] {
+    @media (width >= 40rem) {
+      top: 50px;
+    }
+  }
+  .sm\:top-\[100px\] {
+    @media (width >= 40rem) {
+      top: 100px;
+    }
+  }
+  .sm\:left-\[50\%\] {
+    @media (width >= 40rem) {
+      left: 50%;
+    }
+  }
+  .sm\:left-\[55\%\] {
+    @media (width >= 40rem) {
+      left: 55%;
+    }
+  }
+  .sm\:scale-100 {
+    @media (width >= 40rem) {
+      --tw-scale-x: 100%;
+      --tw-scale-y: 100%;
+      --tw-scale-z: 100%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
   .sm\:text-xl {
     @media (width >= 40rem) {
       font-size: var(--text-xl);
@@ -704,6 +773,21 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -850,6 +934,9 @@ body {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
