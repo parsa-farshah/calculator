@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="src/style/output.css" />
+    <link
+      rel="shortcut icon"
+      href="src/images/icons8-calculate-64.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <section id="bgDark" class="w-full bg-[#9272fc] h-[100vh] relative">
       <!-- calc -->
       <section
-        class="w-[300px] h-[500px] rounded-4xl bg-[#311f6b] py-[2%] px-[1%] border-2 border-[#4223ad] absolute top-7 left-[50%] -translate-x-1/2 perspective-midrange transform-3d"
+        id="calc"
+        class="w-[300px] h-[500px] rounded-4xl bg-[#4427a3] py-[2%] px-[1%] border-2 border-[#4223ad] absolute top-0 left-[55%] -translate-x-1/2 perspective-midrange transform-3d rotate-z-[60deg] rotate-x-[40deg] origin-left duration-500"
       >
         <!-- number -->
         <div
@@ -308,6 +314,14 @@
         id="btnT"
         class="w-[70px] h-full bg-[#ffffff] rounded-full absolute transition-all duration-300 left-0"
       ></div>
+    </section>
+    <!-- animation -->
+    <section
+      class="absolute top-4 right-3 w-fit h-fit p-3 rounded-full inset-shadow-sm inset-shadow-black"
+    >
+      <h2 onclick="anim()" class="cursor-pointer text-xl text-white oi">
+        برای استفاده کلیک کنید
+      </h2>
     </section>
   </body>
   <script src="src/js/master.js"></script>

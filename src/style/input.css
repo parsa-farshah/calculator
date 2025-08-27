@@ -7,12 +7,24 @@
   src: url(../fonts/DS-DIGIT.TTF);
 }
 
+@font-face {
+  font-family: oi;
+  src: url(../fonts/Oi-Regular.ttf);
+}
+
+body {
+  font-family: digital;
+}
+
 @layer utilities {
+  .oi {
+    font-family: oi;
+  }
   .favFont {
     font-family: digital;
   }
   .shadowFav {
-    background: #020202dc;
+    background: #201f1fdc;
     background: radial-gradient(
       circle,
       rgba(37, 37, 37, 0.411) 9%,
@@ -29,5 +41,6 @@
   .backBtnDL {
     left: 0%;
     transition: all 0.4s linear;
+    color: #181818e1;
   }
 }
