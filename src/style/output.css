@@ -19,6 +19,8 @@
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-black: 900;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --blur-xs: 4px;
     --blur-3xl: 64px;
@@ -343,6 +345,15 @@
   .w-\[70px\] {
     width: 70px;
   }
+  .w-\[80\%\] {
+    width: 80%;
+  }
+  .w-\[90\%\] {
+    width: 90%;
+  }
+  .w-\[95\%\] {
+    width: 95%;
+  }
   .w-\[100\%\] {
     width: 100%;
   }
@@ -599,6 +610,12 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
