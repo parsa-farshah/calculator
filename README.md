@@ -47,19 +47,19 @@ This project features a modern 3D design that **smoothly transforms into flat mo
 <img src="src/images/1.jpg" width="100%" alt="3D Calculator Desktop"/>  
 
 ### 💻 Desktop View Dark Mode 
-<img src="src/images/1.jpg" width="100%" alt="3D Calculator Desktop"/>  
+<img src="src/images/2.jpg" width="100%" alt="3D Calculator Desktop"/>  
 
 ### 📱 Tablet View Light Mode
-<img src="src/images/1.jpg" width="70%" alt="3D Calculator Tablet"/>  
+<img src="src/images/3.jpg" width="70%" alt="3D Calculator Tablet"/>  
 
 ### 📱 Tablet View Dark Mode
-<img src="src/images/1.jpg" width="70%" alt="3D Calculator Tablet"/> 
+<img src="src/images/4.jpg" width="70%" alt="3D Calculator Tablet"/> 
 
 ### 📱 Mobile View Light Mode
-<img src="src/images/1.jpg" width="45%" alt="3D Calculator Mobile"/>  
+<img src="src/images/5.jpg" width="45%" alt="3D Calculator Mobile"/>  
 
 ### 📱 Mobile View Dark Mode
-<img src="src/images/1.jpg" width="45%" alt="3D Calculator Mobile"/>  
+<img src="src/images/6.jpg" width="45%" alt="3D Calculator Mobile"/>  
 
 ---
 
