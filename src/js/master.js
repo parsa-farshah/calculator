@@ -103,6 +103,6 @@ function anim() {
   calc.classList.add("top-[85px]");
   calc.classList.add("sm:top-[90px]");
   calc.classList.remove("left-[80%]");
-  calc.classList.add("left-[65%]");
+  calc.classList.add("left-[60%]");
   calc.classList.add("sm:left-[50%]");
 }
