@@ -94,16 +94,15 @@ btnLight.addEventListener("click", () => {
   txtColor.forEach((el) => el.classList.add("text-white"));
 });
 
+let calc = document.getElementById("calc");
+
 function anim() {
-  let calc = document.getElementById("calc");
-
-  // remove transforms
-  calc.classList.remove("rotate-z-[60deg]", "rotate-x-[40deg]");
-
-  // تنظیم موقعیت موبایل (پیش‌فرض)
-  calc.classList.remove("left-[80%]");
-  calc.classList.add("top-[85px]", "left-[70%]");
-
-  // تنظیم موقعیت برای سایز بزرگتر
-  calc.classList.add("sm:top-[90px]", "sm:left-[50%]");
+  calc.classList.remove("rotate-z-[60deg]");
+  calc.classList.remove("rotate-x-[40deg]");
+  calc.classList.add("sm:top-7");
+  calc.classList.add("top-[85px]");
+  calc.classList.add("sm:top-[90px]");
+  calc.classList.remove("left-[70%]");
+  calc.classList.add("left-[60%]");
+  calc.classList.add("sm:left-[50%]");
 }
