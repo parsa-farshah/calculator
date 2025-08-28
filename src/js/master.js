@@ -104,6 +104,6 @@ function anim() {
   calc.classList.add("sm:top-[90px]");
   calc.classList.remove("left-[70%]");
   calc.classList.remove("sm:left-[55%]");
-  calc.classList.add("left-[50%]");
+  calc.classList.add("left-[55%]");
   calc.classList.add("sm:left-[50%]");
 }
