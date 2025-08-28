@@ -43,4 +43,31 @@ body {
     transition: all 0.4s linear;
     color: #181818e1;
   }
+  .rounded1 {
+    border-radius: 75% 25% 17% 83% / 16% 50% 50% 84%;
+    animation: rot1 20s linear alternate infinite;
+  }
+  .rounded2 {
+    border-radius: 32% 68% 49% 51% / 90% 54% 46% 10%;
+    animation: rot2 10s linear alternate infinite;
+  }
+  .bgRounded {
+    border-radius: 14% 86% 0% 100% / 75% 0% 100% 25%;
+  }
+}
+@keyframes rot1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rot2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
