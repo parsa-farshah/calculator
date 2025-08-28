@@ -846,6 +846,11 @@
       left: 55%;
     }
   }
+  .sm\:left-\[70\%\] {
+    @media (width >= 40rem) {
+      left: 70%;
+    }
+  }
   .sm\:h-\[200px\] {
     @media (width >= 40rem) {
       height: 200px;
