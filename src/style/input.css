@@ -7,19 +7,11 @@
   src: url(../fonts/DS-DIGIT.TTF);
 }
 
-@font-face {
-  font-family: oi;
-  src: url(../fonts/Oi-Regular.ttf);
-}
-
 body {
   font-family: digital;
 }
 
 @layer utilities {
-  .oi {
-    font-family: oi;
-  }
   .favFont {
     font-family: digital;
   }

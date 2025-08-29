@@ -25,11 +25,14 @@ function res() {
 
   for (let i = 0; i < cloneOp.length; i++) {
     const x = cloneOp[i];
-    if (x == "+" || x == "-" || x == "*" || x == "/") {
+
+    if ((x === "+" || x === "-" || x === "*" || x === "/") && i !== 0) {
+      // اگر عملگر در موقعیت صفر نباشه، یعنی عملگر واقعی
       op = x;
       continue;
     }
-    if (op == "") {
+
+    if (op === "") {
       num1 += x;
     } else {
       num2 += x;
